@@ -72,8 +72,7 @@ class ReactionChamber:
 		rc.NihiloSplit(0, self.spawn_seed)
 
 		for iteration in self.iterations:
-			_A = ord('a')
-			for disunion in range(_A, _A + self.spawn_seed):
+			for disunion in range((_A := ord('a')), _A + self.spawn_seed):
 				rc.NihiloSplit(iteration, chr(disunion))
 
 	def display_lineage(self):
